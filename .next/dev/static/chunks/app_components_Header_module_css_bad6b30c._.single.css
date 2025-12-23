@@ -1,0 +1,94 @@
+/* [project]/app/components/Header.module.css [app-client] (css) */
+.Header-module__9fWxfa__header {
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  transition: background-color .3s, -webkit-backdrop-filter .3s, backdrop-filter .3s;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Header-module__9fWxfa__logoImage {
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.Header-module__9fWxfa__logoImage:hover {
+  transform: scale(1.05);
+}
+
+.Header-module__9fWxfa__nav {
+  letter-spacing: 1px;
+  gap: 3rem;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+.Header-module__9fWxfa__dropdown {
+  cursor: pointer;
+  position: relative;
+}
+
+.Header-module__9fWxfa__dropdownMenu {
+  border: 1px solid var(--accent);
+  background: #654321f2;
+  border-radius: 2px;
+  flex-direction: column;
+  gap: .8rem;
+  min-width: 150px;
+  margin-top: 1rem;
+  padding: 1rem;
+  animation: .3s Header-module__9fWxfa__fadeIn;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 4px 12px #00000080;
+}
+
+.Header-module__9fWxfa__dropdownMenu a {
+  color: var(--accent-beige);
+  border-bottom: 1px solid #8b73554d;
+  padding: .5rem 1rem;
+  transition: all .3s;
+}
+
+.Header-module__9fWxfa__dropdownMenu a:hover {
+  color: beige;
+  background: #8b73554d;
+  padding-left: 1.3rem;
+}
+
+.Header-module__9fWxfa__dropdownMenu a:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .Header-module__9fWxfa__header {
+    padding: 1.5rem;
+  }
+
+  .Header-module__9fWxfa__logo {
+    flex-shrink: 0;
+  }
+
+  .Header-module__9fWxfa__logoImage {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .Header-module__9fWxfa__nav {
+    gap: 1.2rem;
+    font-size: .85rem;
+  }
+
+  .Header-module__9fWxfa__dropdownMenu {
+    right: -1rem;
+  }
+}
+
+/*# sourceMappingURL=app_components_Header_module_css_bad6b30c._.single.css.map*/

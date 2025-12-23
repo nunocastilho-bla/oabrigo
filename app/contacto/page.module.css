@@ -1,0 +1,250 @@
+.main {
+    min-height: 100vh;
+    padding-top: 140px;
+    padding-bottom: 4rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #f5f5dc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: Georgia, serif;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.info h2,
+.architects h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    color: var(--accent-beige);
+    font-family: Georgia, serif;
+    border-bottom: 2px solid rgba(139, 115, 85, 0.3);
+    padding-bottom: 0.8rem;
+}
+
+.info {
+    background: rgba(101, 67, 33, 0.2);
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(139, 115, 85, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contactDetails>div {
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    border-left: 3px solid var(--accent);
+    transition: border-left-width 0.3s ease;
+}
+
+.contactDetails>div:hover {
+    border-left-width: 6px;
+}
+
+.contactRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    border-left: 3px solid var(--accent);
+    transition: border-left-width 0.3s ease;
+}
+
+.contactRow:hover {
+    border-left-width: 6px;
+}
+
+.contactRow>div {
+    flex: 1;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.copyButton,
+.emailButton {
+    padding: 0.6rem 1rem;
+    background: rgba(139, 115, 85, 0.3);
+    border: 1px solid var(--accent);
+    color: #f5f5dc;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyButton:hover,
+.emailButton:hover {
+    background: var(--accent);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.copyButton:active,
+.emailButton:active {
+    transform: translateY(0);
+}
+
+.contactDetails h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-beige);
+    font-family: Georgia, serif;
+}
+
+.contactDetails p {
+    font-size: 1.1rem;
+    color: #f5f5dc;
+    line-height: 1.6;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.social a {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 115, 85, 0.3);
+    border: 1px solid var(--accent);
+    color: #f5f5dc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: var(--accent);
+    color: var(--text-dark);
+}
+
+.architects {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.architectCard {
+    background: rgba(101, 67, 33, 0.2);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid rgba(139, 115, 85, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.architectCard:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.photo {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(139, 115, 85, 0.3);
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--accent);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.architectCard h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--accent-beige);
+    font-family: Georgia, serif;
+    letter-spacing: 0.5px;
+}
+
+.architectCard p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245, 245, 220, 0.95);
+    text-align: left;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    border-left: 2px solid rgba(139, 115, 85, 0.5);
+}
+
+@media (max-width: 968px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .info,
+    .architectCard {
+        padding: 1.8rem;
+    }
+
+    .photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .contactDetails h3 {
+        font-size: 0.9rem;
+    }
+
+    .architectCard h3 {
+        font-size: 1.4rem;
+    }
+}

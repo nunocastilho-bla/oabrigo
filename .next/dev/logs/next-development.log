@@ -1,0 +1,135 @@
+[00:00:02.426] Server  LOG     ✓ Ready in 1675ms
+[00:00:04.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.473] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.676] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/projectos..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="pt"
+-                         data-jetski-tab-id="1256215923"
+                        >
+                  ...
+
+[00:05:35.487] Server  LOG     ✓ Compiled in 51ms
+[00:09:44.980] Browser WARN    Image with src "http://localhost:3000/images/architects/mafalda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:09:44.980] Browser WARN    Image with src "http://localhost:3000/images/architects/miguel.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:10:10.330] Server  LOG     ✓ Compiled in 32ms
+[00:15:40.950] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:41.300] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/projectos..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="pt"
+-                         data-jetski-tab-id="1256215923"
+                        >
+                  ...
+
+[00:18:16.998] Server  LOG     ✓ Compiled in 70ms
+[00:18:25.139] Server  LOG     ✓ Compiled in 28ms
+[00:18:32.010] Server  LOG     ✓ Compiled in 8ms
+[00:18:43.418] Server  LOG     ✓ Compiled in 9ms
+[00:19:02.422] Server  LOG     ✓ Compiled in 9ms
+[00:19:10.766] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:45.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:46.465] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:47.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:49.254] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:49.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:51.333] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:30.933] Server  LOG     ✓ Compiled in 130ms
+[00:24:40.293] Server  LOG     ✓ Compiled in 39ms
+[00:25:06.263] Server  LOG     ✓ Compiled in 16ms
+[00:30:11.026] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:24:30.893] Server  LOG     ✓ Compiled in 22ms
+[03:38:03.156] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:28:00.553] Server  LOG     ✓ Compiled in 959ms
+[04:28:20.842] Server  LOG     ✓ Compiled in 55ms
+[04:33:39.838] Server  LOG     ✓ Compiled in 108ms
+[04:34:35.987] Server  LOG     ✓ Compiled in 72ms
+[04:36:22.558] Server  LOG     ✓ Compiled in 38ms
+[04:38:26.056] Server  LOG     ✓ Compiled in 137ms
+[04:48:41.171] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:48:42.508] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:48:46.700] Server  LOG     ✓ Compiled in 184ms
+[04:50:04.988] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:54:51.970] Server  LOG     ✓ Compiled in 62ms
+[04:54:54.483] Server  LOG     ✓ Compiled in 12ms
+[04:55:02.082] Server  LOG     ✓ Compiled in 9ms
+[04:55:11.517] Server  LOG     ✓ Compiled in 10ms
+[04:55:15.301] Server  LOG     ✓ Compiled in 11ms
+[04:55:20.237] Server  LOG     ✓ Compiled in 7ms
+[04:55:23.678] Server  LOG     ✓ Compiled in 16ms
+[04:57:10.664] Server  LOG     ✓ Compiled in 27ms
+[04:57:12.090] Server  LOG     ✓ Compiled in 10ms
+[04:57:14.137] Server  LOG     ✓ Compiled in 13ms
+[04:57:16.217] Server  LOG     ✓ Compiled in 10ms
+[04:57:18.632] Server  LOG     ✓ Compiled in 15ms
+[04:57:27.088] Server  LOG     ✓ Compiled in 10ms
+[04:57:28.893] Server  LOG     ✓ Compiled in 9ms
+[04:57:32.582] Server  LOG     ✓ Compiled in 11ms
+[04:57:33.634] Server  LOG     ✓ Compiled in 8ms
+[04:57:42.211] Server  LOG     ✓ Compiled in 9ms
+[04:57:43.712] Server  LOG     ✓ Compiled in 21ms
+[04:57:54.396] Server  LOG     ✓ Compiled in 20ms
+[04:57:56.033] Server  LOG     ✓ Compiled in 9ms
+[04:58:11.190] Server  LOG     ✓ Compiled in 9ms
+[04:58:12.226] Server  LOG     ✓ Compiled in 9ms
+[04:58:16.638] Server  LOG     ✓ Compiled in 10ms
+[04:58:17.776] Server  LOG     ✓ Compiled in 8ms
+[04:58:22.066] Server  LOG     ✓ Compiled in 11ms
+[04:58:24.100] Server  LOG     ✓ Compiled in 14ms
+[04:58:26.061] Server  LOG     ✓ Compiled in 10ms
+[05:01:37.772] Server  LOG     ✓ Compiled in 1737ms
+[05:01:42.237] Server  LOG     ✓ Compiled in 182ms
+[05:01:44.507] Server  LOG     ✓ Compiled in 81ms
+[05:06:02.287] Server  LOG     ✓ Compiled in 1490ms

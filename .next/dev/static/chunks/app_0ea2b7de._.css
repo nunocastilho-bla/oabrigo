@@ -1,0 +1,317 @@
+/* [project]/app/components/Header.module.css [app-client] (css) */
+.Header-module__9fWxfa__header {
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #1a1410f2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Header-module__9fWxfa__logoImage {
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.Header-module__9fWxfa__logoImage:hover {
+  transform: scale(1.05);
+}
+
+.Header-module__9fWxfa__nav {
+  letter-spacing: 1px;
+  gap: 3rem;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+.Header-module__9fWxfa__dropdown {
+  cursor: pointer;
+  position: relative;
+}
+
+.Header-module__9fWxfa__dropdownMenu {
+  border: 1px solid var(--border-color);
+  background: #fffffffa;
+  flex-direction: column;
+  gap: .8rem;
+  min-width: 150px;
+  margin-top: 1rem;
+  padding: 1rem;
+  animation: .3s Header-module__9fWxfa__fadeIn;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.Header-module__9fWxfa__dropdownMenu a {
+  border-bottom: 1px solid var(--border-color);
+  padding: .5rem 1rem;
+}
+
+.Header-module__9fWxfa__dropdownMenu a:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .Header-module__9fWxfa__header {
+    padding: 1rem 1.5rem;
+  }
+
+  .Header-module__9fWxfa__nav {
+    gap: 1.5rem;
+    font-size: .9rem;
+  }
+
+  .Header-module__9fWxfa__logo .Header-module__9fWxfa__triangle {
+    width: 60px;
+    height: 60px;
+    font-size: .6rem;
+  }
+}
+
+/* [project]/app/projectos/[id]/project.module.css [app-client] (css) */
+.project-module__0wFOmW__main {
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 4rem;
+}
+
+.project-module__0wFOmW__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.project-module__0wFOmW__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-module__0wFOmW__header h1 {
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000c;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.project-module__0wFOmW__metadata {
+  opacity: .9;
+  color: var(--text-light);
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.project-module__0wFOmW__description {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000000b3;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.project-module__0wFOmW__gallery {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  display: grid;
+}
+
+.project-module__0wFOmW__imageContainer {
+  aspect-ratio: 4 / 3;
+  border: 3px solid var(--accent-beige);
+  background: var(--accent-beige);
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all .4s;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #0000004d;
+}
+
+.project-module__0wFOmW__imageContainer:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px #00000080;
+}
+
+.project-module__0wFOmW__placeholder {
+  width: 100%;
+  height: 100%;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--accent-beige) 0%, var(--accent) 100%);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+}
+
+.project-module__0wFOmW__lightbox {
+  z-index: 1000;
+  background: #000000f2;
+  justify-content: center;
+  align-items: center;
+  animation: .3s project-module__0wFOmW__fadeIn;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.project-module__0wFOmW__lightboxContent {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+}
+
+.project-module__0wFOmW__imageWrapper {
+  background: #ffffff0d;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 80vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.project-module__0wFOmW__lightboxPlaceholder {
+  width: 100%;
+  min-height: 500px;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--accent-beige) 0%, var(--accent) 100%);
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: flex;
+}
+
+.project-module__0wFOmW__closeButton {
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+  background: #fff3;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  transition: all .3s;
+  display: flex;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+.project-module__0wFOmW__closeButton:hover {
+  background: #ffffff4d;
+  transform: scale(1.1);
+}
+
+.project-module__0wFOmW__navButton {
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+  background: #fff3;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 3rem;
+  transition: all .3s;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-module__0wFOmW__navButton:hover {
+  background: #ffffff4d;
+  transform: translateY(-50%)scale(1.1);
+}
+
+.project-module__0wFOmW__prevButton {
+  left: 2rem;
+}
+
+.project-module__0wFOmW__nextButton {
+  right: 2rem;
+}
+
+.project-module__0wFOmW__imageCounter {
+  color: #fff;
+  letter-spacing: 1px;
+  background: #00000080;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .project-module__0wFOmW__container {
+    padding: 0 1.5rem;
+  }
+
+  .project-module__0wFOmW__header h1 {
+    font-size: 2rem;
+  }
+
+  .project-module__0wFOmW__metadata {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .project-module__0wFOmW__gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-module__0wFOmW__navButton {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .project-module__0wFOmW__prevButton {
+    left: 1rem;
+  }
+
+  .project-module__0wFOmW__nextButton {
+    right: 1rem;
+  }
+
+  .project-module__0wFOmW__closeButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .project-module__0wFOmW__lightboxPlaceholder {
+    min-height: 300px;
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=app_0ea2b7de._.css.map*/
