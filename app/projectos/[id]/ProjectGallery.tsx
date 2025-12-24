@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './project.module.css';
 
 interface ProjectGalleryProps {
@@ -11,14 +12,36 @@ interface ProjectGalleryProps {
 export default function ProjectGallery({ projectId, projectTitle }: ProjectGalleryProps) {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState<Array<{ src: string; alt: string }>>([]);
 
-    // Replace with actual images count when you upload them
-    const imageCount = 5; // Placeholder count
-    const images = Array.from({ length: imageCount }, (_, i) => ({
-        src: `/images/projects/${projectId}/${i + 1}.jpg`,
-        alt: `${projectTitle} - Image ${i + 1}`,
-        placeholder: `Imagem ${i + 1}`
-    }));
+    // Load available images on mount
+    useEffect(() => {
+        const checkImages = async () => {
+            const availableImages: Array<{ src: string; alt: string }> = [];
+            const maxImages = 20;
+
+            for (let i = 1; i <= maxImages; i++) {
+                const imagePath = `/images/projects/${projectId}/${i}.png`;
+                try {
+                    const response = await fetch(imagePath, { method: 'HEAD' });
+                    if (response.ok) {
+                        availableImages.push({
+                            src: imagePath,
+                            alt: `${projectTitle} - Image ${i}`
+                        });
+                    }
+                } catch {
+                    // Image doesn't exist, skip it
+                    break; // Stop checking if we hit a missing image
+                }
+            }
+            setLoadedImages(availableImages);
+        };
+
+        checkImages();
+    }, [projectId, projectTitle]);
+
+    const images = loadedImages;
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -63,9 +86,13 @@ export default function ProjectGallery({ projectId, projectTitle }: ProjectGalle
                         className={styles.imageContainer}
                         onClick={() => openLightbox(index)}
                     >
-                        <div className={styles.placeholder}>
-                            {image.placeholder}
-                        </div>
+                        <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            sizes="(max-width: 768px) 100vw, 350px"
+                        />
                     </div>
                 ))}
             </div>
@@ -89,9 +116,13 @@ export default function ProjectGallery({ projectId, projectTitle }: ProjectGalle
 
                     <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
                         <div className={styles.imageWrapper}>
-                            <div className={styles.lightboxPlaceholder}>
-                                {images[currentImageIndex].placeholder}
-                            </div>
+                            <Image
+                                src={images[currentImageIndex].src}
+                                alt={images[currentImageIndex].alt}
+                                fill
+                                style={{ objectFit: 'contain' }}
+                                sizes="90vw"
+                            />
                         </div>
                         <div className={styles.imageCounter}>
                             {currentImageIndex + 1} / {images.length}

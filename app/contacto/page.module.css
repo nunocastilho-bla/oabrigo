@@ -83,7 +83,6 @@
 }
 
 .contactRow>div {
-    flex: 1;
     padding: 0;
     background: none;
     border: none;
@@ -92,6 +91,8 @@
 .buttonGroup {
     display: flex;
     gap: 0.5rem;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .copyButton,

@@ -195,25 +195,52 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$projectos$2f5b$id$5d2f$project$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/app/projectos/[id]/project.module.css [app-client] (css module)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
+;
 function ProjectGallery({ projectId, projectTitle }) {
     _s();
     const [lightboxOpen, setLightboxOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [currentImageIndex, setCurrentImageIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    // Replace with actual images count when you upload them
-    const imageCount = 5; // Placeholder count
-    const images = Array.from({
-        length: imageCount
-    }, (_, i)=>({
-            src: `/images/projects/${projectId}/${i + 1}.jpg`,
-            alt: `${projectTitle} - Image ${i + 1}`,
-            placeholder: `Imagem ${i + 1}`
-        }));
+    const [loadedImages, setLoadedImages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    // Load available images on mount
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ProjectGallery.useEffect": ()=>{
+            const checkImages = {
+                "ProjectGallery.useEffect.checkImages": async ()=>{
+                    const availableImages = [];
+                    const maxImages = 20;
+                    for(let i = 1; i <= maxImages; i++){
+                        const imagePath = `/images/projects/${projectId}/${i}.png`;
+                        try {
+                            const response = await fetch(imagePath, {
+                                method: 'HEAD'
+                            });
+                            if (response.ok) {
+                                availableImages.push({
+                                    src: imagePath,
+                                    alt: `${projectTitle} - Image ${i}`
+                                });
+                            }
+                        } catch  {
+                            break; // Stop checking if we hit a missing image
+                        }
+                    }
+                    setLoadedImages(availableImages);
+                }
+            }["ProjectGallery.useEffect.checkImages"];
+            checkImages();
+        }
+    }["ProjectGallery.useEffect"], [
+        projectId,
+        projectTitle
+    ]);
+    const images = loadedImages;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ProjectGallery.useEffect": ()=>{
             const handleKeyDown = {
@@ -257,22 +284,27 @@ function ProjectGallery({ projectId, projectTitle }) {
                 children: images.map((image, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$projectos$2f5b$id$5d2f$project$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].imageContainer,
                         onClick: ()=>openLightbox(index),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$projectos$2f5b$id$5d2f$project$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].placeholder,
-                            children: image.placeholder
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            src: image.src,
+                            alt: image.alt,
+                            fill: true,
+                            style: {
+                                objectFit: 'cover'
+                            },
+                            sizes: "(max-width: 768px) 100vw, 350px"
                         }, void 0, false, {
                             fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                            lineNumber: 66,
+                            lineNumber: 89,
                             columnNumber: 25
                         }, this)
                     }, index, false, {
                         fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                        lineNumber: 61,
+                        lineNumber: 84,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                lineNumber: 59,
+                lineNumber: 82,
                 columnNumber: 13
             }, this),
             lightboxOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -285,7 +317,7 @@ function ProjectGallery({ projectId, projectTitle }) {
                         children: "✕"
                     }, void 0, false, {
                         fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                        lineNumber: 76,
+                        lineNumber: 103,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -297,7 +329,7 @@ function ProjectGallery({ projectId, projectTitle }) {
                         children: "‹"
                     }, void 0, false, {
                         fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                        lineNumber: 80,
+                        lineNumber: 107,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -306,17 +338,22 @@ function ProjectGallery({ projectId, projectTitle }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$projectos$2f5b$id$5d2f$project$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].imageWrapper,
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$projectos$2f5b$id$5d2f$project$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].lightboxPlaceholder,
-                                    children: images[currentImageIndex].placeholder
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    src: images[currentImageIndex].src,
+                                    alt: images[currentImageIndex].alt,
+                                    fill: true,
+                                    style: {
+                                        objectFit: 'contain'
+                                    },
+                                    sizes: "90vw"
                                 }, void 0, false, {
                                     fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 119,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                                lineNumber: 91,
+                                lineNumber: 118,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -328,13 +365,13 @@ function ProjectGallery({ projectId, projectTitle }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                                lineNumber: 96,
+                                lineNumber: 127,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                        lineNumber: 90,
+                        lineNumber: 117,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -346,19 +383,19 @@ function ProjectGallery({ projectId, projectTitle }) {
                         children: "›"
                     }, void 0, false, {
                         fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                        lineNumber: 101,
+                        lineNumber: 132,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/projectos/[id]/ProjectGallery.tsx",
-                lineNumber: 75,
+                lineNumber: 102,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true);
 }
-_s(ProjectGallery, "4gSCU+JXdO8mBvUP7yZJ/7tqnLw=");
+_s(ProjectGallery, "zAvPrwW//5x4fS9bAyd36AIMSOw=");
 _c = ProjectGallery;
 var _c;
 __turbopack_context__.k.register(_c, "ProjectGallery");

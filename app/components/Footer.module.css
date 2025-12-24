@@ -35,7 +35,8 @@
     }
 
     .social {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 1rem;
+        font-size: 0.95rem;
     }
 }

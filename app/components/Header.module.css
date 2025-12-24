@@ -34,32 +34,35 @@
 
 .dropdownMenu {
     position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 1rem;
+    top: calc(100% - 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 1rem;
     background: rgba(101, 67, 33, 0.95);
     border: 1px solid var(--accent);
-    padding: 1rem;
+    padding: 1rem 0.8rem 0.8rem 0.8rem;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    min-width: 150px;
+    gap: 0.3rem;
+    min-width: 100px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease;
     border-radius: 2px;
 }
 
 .dropdownMenu a {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+    padding: 0.4rem 0.8rem;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.2);
     color: var(--accent-beige);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    text-align: center;
 }
 
 .dropdownMenu a:hover {
     background: rgba(139, 115, 85, 0.3);
     color: #f5f5dc;
-    padding-left: 1.3rem;
+    padding-left: 0.9rem;
 }
 
 .dropdownMenu a:last-child {

@@ -3,13 +3,13 @@ import Footer from './components/Footer';
 import styles from './page.module.css';
 
 const projects = [
-    { id: 'a01', location: 'Grândola', phase: 'PIP', type: 'Habitação' },
-    { id: 'a02', location: 'Ferreira', phase: 'Execução', type: 'Habitação' },
-    { id: 'a03', location: 'Sintra', phase: 'Licenciamento', type: 'Habitação' },
-    { id: 'a04', location: 'Grândola', phase: 'PIP', type: 'Consultoria' },
-    { id: 'a05', location: 'Ferreira', phase: 'Execução', type: 'Habitação' },
-    { id: 'a06', location: 'Lisboa', phase: 'Licenciamento', type: 'Habitação' },
-    { id: 'a07', location: 'Alentejo', phase: 'PIP', type: 'Habitação' },
+    { id: 'a01', location: 'Grândola', phase: 'PIP', type: 'Habitação', coverImage: '/images/projects/a01/cover.png' },
+    { id: 'a02', location: 'Ferreira', phase: 'Execução', type: 'Habitação', coverImage: '/images/projects/a02/cover.png' },
+    { id: 'a03', location: 'Sintra', phase: 'Licenciamento', type: 'Habitação', coverImage: '/images/projects/a03/cover.png' },
+    { id: 'a04', location: 'Grândola', phase: 'PIP', type: 'Consultoria', coverImage: '/images/projects/a04/cover.png' },
+    { id: 'a05', location: 'Ferreira', phase: 'Execução', type: 'Habitação', coverImage: '/images/projects/a05/cover.png' },
+    { id: 'a06', location: 'Lisboa', phase: 'Licenciamento', type: 'Habitação', coverImage: '/images/projects/a06/cover.png' },
+    { id: 'a07', location: 'Alentejo', phase: 'PIP', type: 'Habitação', coverImage: '/images/projects/a07/cover.png' },
 ];
 
 const services = [
@@ -64,6 +64,9 @@ export default function HomePage() {
                                     key={project.id}
                                     href={`/projectos/${project.id}`}
                                     className={styles.projectCircle}
+                                    style={{
+                                        backgroundImage: `url(${project.coverImage})`
+                                    }}
                                 >
                                     <div className={styles.circleContent}>
                                         <span className={styles.projectId}>{project.id.toUpperCase()}</span>

@@ -85,12 +85,13 @@
 .page-module__fWUZKG__contactRow > div {
   background: none;
   border: none;
-  flex: 1;
   padding: 0;
 }
 
 .page-module__fWUZKG__buttonGroup {
+  flex-shrink: 0;
   gap: .5rem;
+  margin-left: auto;
   display: flex;
 }
 

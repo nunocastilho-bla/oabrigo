@@ -36,8 +36,9 @@
   }
 
   .Footer-module__nhiC3q__social {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
+    font-size: .95rem;
   }
 }
 

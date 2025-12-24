@@ -51,6 +51,7 @@
 }
 
 .imageContainer {
+    position: relative;
     aspect-ratio: 4 / 3;
     border-radius: 12px;
     overflow: hidden;
@@ -104,12 +105,10 @@
 }
 
 .imageWrapper {
-    width: 100%;
+    position: relative;
+    width: 90vw;
     max-width: 1200px;
-    max-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 80vh;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     overflow: hidden;
@@ -130,48 +129,52 @@
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: transparent;
     color: white;
-    border: 2px solid white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 2rem;
+    border: none;
+    width: auto;
+    height: auto;
+    font-size: 3rem;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 1001;
+    padding: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .closeButton:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
+    transform: scale(1.2);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
 }
 
 .navButton {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
+    background: transparent;
     color: white;
-    border: 2px solid white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 3rem;
+    border: none;
+    width: auto;
+    height: auto;
+    font-size: 4rem;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 1001;
+    padding: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .navButton:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.2);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
 }
 
 .prevButton {

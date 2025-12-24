@@ -9,7 +9,6 @@ __turbopack_context__.v({
   "logo": "Header-module__9fWxfa__logo",
   "logoImage": "Header-module__9fWxfa__logoImage",
   "nav": "Header-module__9fWxfa__nav",
-  "triangle": "Header-module__9fWxfa__triangle",
 });
 }),
 "[project]/app/components/Header.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
@@ -34,8 +33,29 @@ var _s = __turbopack_context__.k.signature();
 function Header() {
     _s();
     const [projectsOpen, setProjectsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Header.useEffect": ()=>{
+            const handleScroll = {
+                "Header.useEffect.handleScroll": ()=>{
+                    const scrollPosition = window.scrollY;
+                    // Calculate opacity based on scroll (0 to 1, maxing out at 200px scroll)
+                    const opacity = Math.min(scrollPosition / 200, 1);
+                    setScrolled(opacity);
+                }
+            }["Header.useEffect.handleScroll"];
+            window.addEventListener('scroll', handleScroll);
+            return ({
+                "Header.useEffect": ()=>window.removeEventListener('scroll', handleScroll)
+            })["Header.useEffect"];
+        }
+    }["Header.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].header,
+        style: {
+            backgroundColor: `rgba(26, 20, 16, ${scrolled * 0.95})`,
+            backdropFilter: scrolled > 0 ? `blur(${scrolled * 10}px)` : 'none'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].logo,
@@ -49,17 +69,17 @@ function Header() {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].logoImage
                     }, void 0, false, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 15,
+                        lineNumber: 34,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/Header.tsx",
-                    lineNumber: 14,
+                    lineNumber: 33,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/Header.tsx",
-                lineNumber: 13,
+                lineNumber: 32,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -70,7 +90,7 @@ function Header() {
                         children: "INÍCIO"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 26,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -78,7 +98,7 @@ function Header() {
                         children: "CONTACTO"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 27,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -90,7 +110,7 @@ function Header() {
                                 children: "PROJECTOS"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Header.tsx",
-                                lineNumber: 33,
+                                lineNumber: 52,
                                 columnNumber: 21
                             }, this),
                             projectsOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -108,34 +128,34 @@ function Header() {
                                         children: project
                                     }, project, false, {
                                         fileName: "[project]/app/components/Header.tsx",
-                                        lineNumber: 37,
+                                        lineNumber: 56,
                                         columnNumber: 33
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Header.tsx",
-                                lineNumber: 35,
+                                lineNumber: 54,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 28,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Header.tsx",
-                lineNumber: 25,
+                lineNumber: 44,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/Header.tsx",
-        lineNumber: 12,
+        lineNumber: 25,
         columnNumber: 9
     }, this);
 }
-_s(Header, "7Jn4+yhTBfNQtgly3EQhHa7UMyU=");
+_s(Header, "3fT974zWKbF+WrQuqb9yTMrqTy4=");
 _c = Header;
 var _c;
 __turbopack_context__.k.register(_c, "Header");
@@ -379,7 +399,7 @@ function ContactPage() {
                                                         onClick: ()=>copyToClipboard(phone, 'phone'),
                                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$contacto$2f$page$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].copyButton,
                                                         title: "Copiar número",
-                                                        children: phoneCopied ? '✓' : '📋'
+                                                        children: phoneCopied ? '✓' : '⎘'
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contacto/page.tsx",
                                                         lineNumber: 45,
@@ -423,7 +443,7 @@ function ContactPage() {
                                                                 onClick: ()=>copyToClipboard(email, 'email'),
                                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$contacto$2f$page$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].copyButton,
                                                                 title: "Copiar email",
-                                                                children: emailCopied ? '✓' : '📋'
+                                                                children: emailCopied ? '✓' : '⎘'
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contacto/page.tsx",
                                                                 lineNumber: 59,
