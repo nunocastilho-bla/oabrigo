@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.copyright}>
-                <p>©2024 Abrigo Atelier. Imagens e Fotografias por Abrigo Atelier.</p>
+                <p>©2025 Abrigo Atelier. Imagens e Fotografias por Abrigo Atelier.</p>
             </div>
         </footer>
     );

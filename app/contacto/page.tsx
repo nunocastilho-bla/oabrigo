@@ -47,7 +47,7 @@ export default function ContactPage() {
                                         className={styles.copyButton}
                                         title="Copiar número"
                                     >
-                                        {phoneCopied ? '✓' : '⎘'}
+                                        {phoneCopied ? '✓' : '⧉'}
                                     </button>
                                 </div>
                                 <div className={styles.contactRow}>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                                             className={styles.copyButton}
                                             title="Copiar email"
                                         >
-                                            {emailCopied ? '✓' : '⎘'}
+                                            {emailCopied ? '✓' : '⧉'}
                                         </button>
                                         <a
                                             href={`mailto:${email}`}

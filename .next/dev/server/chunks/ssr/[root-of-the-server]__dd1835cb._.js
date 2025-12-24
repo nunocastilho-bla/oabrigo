@@ -84,19 +84,11 @@ function Header() {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].nav,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/",
-                        children: "INÍCIO"
-                    }, void 0, false, {
-                        fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 45,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: "/contacto",
                         children: "CONTACTO"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 46,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -108,7 +100,7 @@ function Header() {
                                 children: "PROJECTOS"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Header.tsx",
-                                lineNumber: 52,
+                                lineNumber: 51,
                                 columnNumber: 21
                             }, this),
                             projectsOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,18 +118,18 @@ function Header() {
                                         children: project
                                     }, project, false, {
                                         fileName: "[project]/app/components/Header.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 55,
                                         columnNumber: 33
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Header.tsx",
-                                lineNumber: 54,
+                                lineNumber: 53,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Header.tsx",
-                        lineNumber: 47,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, this)
                 ]
@@ -250,7 +242,7 @@ function Footer() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].copyright,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    children: "©2024 Abrigo Atelier. Imagens e Fotografias por Abrigo Atelier."
+                    children: "©2025 Abrigo Atelier. Imagens e Fotografias por Abrigo Atelier."
                 }, void 0, false, {
                     fileName: "[project]/app/components/Footer.tsx",
                     lineNumber: 21,
@@ -382,7 +374,7 @@ function ContactPage() {
                                                         onClick: ()=>copyToClipboard(phone, 'phone'),
                                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$contacto$2f$page$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].copyButton,
                                                         title: "Copiar número",
-                                                        children: phoneCopied ? '✓' : '⎘'
+                                                        children: phoneCopied ? '✓' : '⧉'
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contacto/page.tsx",
                                                         lineNumber: 45,
@@ -426,7 +418,7 @@ function ContactPage() {
                                                                 onClick: ()=>copyToClipboard(email, 'email'),
                                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$contacto$2f$page$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].copyButton,
                                                                 title: "Copiar email",
-                                                                children: emailCopied ? '✓' : '⎘'
+                                                                children: emailCopied ? '✓' : '⧉'
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contacto/page.tsx",
                                                                 lineNumber: 59,

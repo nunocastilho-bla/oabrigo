@@ -42,7 +42,6 @@ export default function Header() {
             </div>
 
             <nav className={styles.nav}>
-                <Link href="/">INÍCIO</Link>
                 <Link href="/contacto">CONTACTO</Link>
                 <div
                     className={styles.dropdown}

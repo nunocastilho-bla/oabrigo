@@ -92,6 +92,7 @@
     cursor: pointer;
     color: var(--text-dark);
     overflow: hidden;
+    font-weight: 600;
 }
 
 .projectCircle::before {

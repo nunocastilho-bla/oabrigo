@@ -91,6 +91,7 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
   transition: all .5s;
   display: flex;
   position: relative;
